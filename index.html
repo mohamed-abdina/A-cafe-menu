@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cozy Corner Cafe - Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #faf6f1;
+            color: #3d2c2c;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #5c3d2e 0%, #8b5a2b 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        nav {
+            background-color: #3d2c2c;
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 25px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4a574;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .menu-section {
+            margin-bottom: 50px;
+        }
+
+        .menu-section h2 {
+            font-size: 2rem;
+            color: #5c3d2e;
+            border-bottom: 3px solid #d4a574;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .menu-item {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .menu-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+        }
+
+        .menu-item h3 {
+            font-size: 1.1rem;
+            color: #3d2c2c;
+        }
+
+        .price {
+            font-size: 1.1rem;
+            color: #8b5a2b;
+            font-weight: bold;
+        }
+
+        .menu-item p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .dietary-tags {
+            margin-top: 10px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            font-size: 0.75rem;
+            border-radius: 12px;
+            margin-right: 5px;
+        }
+
+        .tag-vegan { background: #e8f5e9; color: #2e7d32; }
+        .tag-vegetarian { background: #f1f8e9; color: #558b2f; }
+        .tag-gluten-free { background: #fff3e0; color: #e65100; }
+        .tag-popular { background: #fce4ec; color: #c2185b; }
+
+        footer {
+            background-color: #3d2c2c;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        .hours {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The Cozy Corner Cafe</h1>
+        <p>Handcrafted with love, served with a smile</p>
+    </header>
+
+    <nav>
+        <a href="#coffee">Coffee</a>
+        <a href="#tea">Tea</a>
+        <a href="#pastries">Pastries</a>
+        <a href="#brunch">Brunch</a>
+        <a href="#specials">Specials</a>
+    </nav>
+
+    <main>
+        <section id="coffee" class="menu-section">
+            <h2>Coffee & Espresso</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3>Classic Drip Coffee</h3>
+                        <span class="price">$3.50</span>
+                    </div>
+                    <p>Our signature house blend, smooth and balanced</p>
+                    <div class="dietary-tags">
+                        <span class="tag tag-vegan">Vegan</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3>Cafe Latte</h3>
+                        <span class="price">$5.00</span>
+                    </div>
+                    <p>Rich espresso with steamed milk and velvety foam</p>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3>Caramel Macchiato</h3>
+                        <span class="price">$5.50</span>
+                    </div>
+                    <p>Espresso layered with vanilla and caramel drizzle</p>
+                    <div class="dietary-tags">
+                        <span class="tag tag-popular">Popular</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3>Cold Brew</h3>
+                        <span class="price">$4.50</span>
+                    </div>
+                    <p>Slow-steeped for 20 hours, incredibly smooth</p>
+                    <div class="dietary-tags">
+                        <span class="tag tag-vegan">Vegan</span>
+                        <span class="tag tag-popular">Popular</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3>Cappuccino</h3>
+                        <span class="price">$5.00</span>
+                    </div>
+                    <p>Equal parts espresso, steamed milk, and thick foam</p>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3>Mocha</h3>
+                        <span class="price">$5.75</span>
+                    </div>
+                    <p>Espresso with rich chocolate and steamed milk</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tea" class="menu-section">
+            <h2>Tea & Non-Coffee</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3>English Breakfast</h3>
+                        <span class="price">$3.50</span>
+                    </div>
+                    <p>Classic black tea, bold and refreshing</p>
+                    <div class="dietary-tags">
+                        <span class="tag tag-vegan">Vegan</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3>Matcha Latte</h3>
+                        <span class="price">$5.50</span>
+                    </div>
+                    <p>Premium Japanese matcha with your choice of milk</p>
+                    <div class="dietary-tags">
+                        <span class="tag tag-vegetarian">Vegetarian</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3>Chai Latte</h3>
+                        <span class="price">$5.00</span>
+                    </div>
+                    <p>Spiced chai with steamed milk and honey</p>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3>Fresh Mint Tea</h3>
+                        <span class="price">$4.00</span>
+                    </div>
+                    <p>Hand-picked mint leaves steeped to perfection</p>
+                    <div class="dietary-tags">
+                        <span class="tag tag-vegan">Vegan</span>
+                        <span class="tag tag-gluten-free">Gluten Free</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pastries" class="menu-section">
+            <h2>Pastries & Baked Goods</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3>Butter Croissant</h3>
+                        <span class="price">$3.75</span>
+                    </div>
+                    <p>Flaky, golden, and baked fresh every morning</p>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3>Blueberry Muffin</h3>
+                        <span class="price">$4.00</span>
+                    </div>
+                    <p>Loaded with wild blueberries and a crumbly top</p>
+                    <div class="dietary-tags">
+                        <span class="tag tag-vegetarian">Vegetarian</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3>Cinnamon Roll</h3>
+                        <span class="price">$4.50</span>
+                    </div>
+                    <p>Warm, gooey, and topped with cream cheese icing</p>
+                    <div class="dietary-tags">
+                        <span class="tag tag-popular">Popular</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3>Avocado Toast</h3>
+                        <span class="price">$8.00</span>
+                    </div>
+                    <p>Mashed avocado on sourdough with everything seasoning</p>
+                    <div class="dietary-tags">
+                        <span class="tag tag-vegan">Vegan</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3>Chocolate Brownie</h3>
+                        <span class="price">$4.25</span>
+                    </div>
+                    <p>Dense, fudgy, and irresistibly chocolatey</p>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3>Lemon Poppy Seed Scone</h3>
+                        <span class="price">$3.75</span>
+                    </div>
+                    <p>Bright citrus flavor with a tender, crumbly texture</p>
+                    <div class="dietary-tags">
+                        <span class="tag tag-vegetarian">Vegetarian</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="brunch" class="menu-section">
+            <h2>Brunch</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3>Classic Eggs Benedict</h3>
+                        <span class="price">$12.00</span>
+                    </div>
+                    <p>Poached eggs, Canadian bacon, hollandaise on English muffin</p>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3>French Toast</h3>
+                        <span class="price">$10.00</span>
+                    </div>
+                    <p>Brioche bread, maple syrup, fresh berries, whipped cream</p>
+                    <div class="dietary-tags">
+                        <span class="tag tag-popular">Popular</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3>Avocado Benedict</h3>
+                        <span class="price">$13.00</span>
+                    </div>
+                    <p>Poached eggs, avocado, hollandaise on sourdough</p>
+                    <div class="dietary-tags">
+                        <span class="tag tag-vegetarian">Vegetarian</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3>Granola Bowl</h3>
+                        <span class="price">$9.00</span>
+                    </div>
+                    <p>House-made granola, Greek yogurt, honey, seasonal fruit</p>
+                    <div class="dietary-tags">
+                        <span class="tag tag-vegetarian">Vegetarian</span>
+                        <span class="tag tag-gluten-free">Gluten Free</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="specials" class="menu-section">
+            <h2>Daily Specials</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3>Pumpkin Spice Latte</h3>
+                        <span class="price">$6.00</span>
+                    </div>
+                    <p>Seasonal favorite with real pumpkin and warm spices</p>
+                    <div class="dietary-tags">
+                        <span class="tag tag-popular">Limited Time</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3>Lavender Honey Latte</h3>
+                        <span class="price">$6.00</span>
+                    </div>
+                    <p>Floral lavender with local honey and espresso</p>
+                    <div class="dietary-tags">
+                        <span class="tag tag-popular">New</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>The Cozy Corner Cafe</p>
+        <p class="hours">Open Daily: 7:00 AM - 6:00 PM</p>
+        <p class="hours">123 Coffee Lane, Brewtown | (555) 123-BREW</p>
+    </footer>
+</body>
+</html>
