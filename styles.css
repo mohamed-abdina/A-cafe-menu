@@ -76,3 +76,7 @@ article {
 footer {
   font-size: 14px;
 }
+
+address {
+  font-style: normal;
+}
